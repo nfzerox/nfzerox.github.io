@@ -1,0 +1,17 @@
+Package: com.tlsfix
+Name: TLSFix
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: Modern HTTPS for legacy iOS. Routes HTTPS through a bundled mbedTLS (TLS 1.2/1.3) Secure Transport shim so old Safari and apps reach modern servers again. Safari is on by default. For the in-Settings configuration UI (per-app toggles and options) install PreferenceLoader and AppList too; otherwise enable apps by editing /var/mobile/Library/Preferences/com.tlsfix.plist by hand.
+Depends: mobilesubstrate
+Recommends: preferenceloader, applist
+Author: nfzerox
+Maintainer: nfzerox
+Section: Tweaks
+Homepage: https://github.com/nfzerox/TLSFix
+Installed-Size: 2504
+Filename: debs/tlsfix_1.0.0_iphoneos-arm.deb
+Size: 1176642
+MD5sum: 0d574dc8908e1f7a770a2664bc98fd11
+SHA1: d4aff6f9a4d410c43b813b9d45a430f5d429c4cb
+SHA256: 9cb61382a73a1d38f3104edeb90abb38e92be5a43bea2793dd2b062f771133b1

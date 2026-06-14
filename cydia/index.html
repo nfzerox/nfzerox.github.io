@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nfzerox repo</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 16px/1.6 -apple-system, system-ui, "Helvetica Neue", Arial, sans-serif;
+         max-width: 40rem; margin: 3rem auto; padding: 0 1.25rem; }
+  h1 { margin-bottom: .25rem; }
+  .sub { color: #888; margin-top: 0; }
+  code, .src { font-family: ui-monospace, "SF Mono", Menlo, monospace; }
+  .src { background: rgba(127,127,127,.15); padding: .15rem .4rem; border-radius: .35rem; }
+  .pkg { border: 1px solid rgba(127,127,127,.3); border-radius: .6rem; padding: 1rem 1.25rem; margin: 1.5rem 0; }
+  .pkg h2 { margin: 0 0 .25rem; }
+  .note { border-left: 4px solid #e0a458; background: rgba(224,164,88,.13);
+          padding: .75rem 1rem; border-radius: .4rem; margin: 1.5rem 0; }
+  a { color: #0a7; }
+  footer { color: #888; font-size: .85rem; margin-top: 2.5rem; }
+</style>
+</head>
+<body>
+  <h1>nfzerox</h1>
+  <p class="sub">A small Cydia / APT repository for legacy iOS.</p>
+
+  <div class="note">
+    <strong>On an older iOS? Install modern root certificates first.</strong>
+    This page and the repo are served over HTTPS, which old iOS can't validate until today's root
+    certificates are on the device (the same reason old Safari can't open modern sites). Open
+    <a href="https://tlsroot.litten.ca/">tlsroot.litten.ca</a> in Safari and install the
+    "iOS Bundle", then come back and add the source below. Already stuck and can't load
+    anything? Download the .deb directly and install it yourself instead.
+  </div>
+
+  <p>Add this source in <strong>Cydia</strong>:</p>
+  <p><span class="src">https://nfzerox.github.io/cydia/</span></p>
+
+  <div class="pkg">
+    <h2>TLSFix</h2>
+    <p>Modern HTTPS for legacy iPhone, iPad, and iPod touch running iOS 3 to iOS 9.
+       Routes the device's HTTPS through a bundled mbedTLS (TLS 1.2 / 1.3, modern ciphers and
+       certificates) so old Safari and apps can reach today's servers again, with full certificate
+       verification.</p>
+    <p>
+      <a href="debs/tlsfix_1.0.0_iphoneos-arm.deb">Download .deb</a> ·
+      <a href="https://github.com/nfzerox/TLSFix">Source &amp; docs</a>
+    </p>
+  </div>
+</body>
+</html>
