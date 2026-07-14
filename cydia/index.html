@@ -37,13 +37,14 @@
   <p><span class="src">https://nfzerox.github.io/cydia/</span></p>
 
   <div class="pkg">
-    <h2>TLSFix</h2>
-    <p>Modern HTTPS for legacy iPhone, iPad, and iPod touch running iOS 3 to iOS 9.
-       Routes the device's HTTPS through a bundled mbedTLS (TLS 1.2 / 1.3, modern ciphers and
-       certificates) so old Safari and apps can reach today's servers again, with full certificate
-       verification.</p>
+    <h2>TLSFix <span class="sub" style="font-size:.8em">v1.1</span></h2>
+    <p>Modern SSL/TLS for legacy iPhone, iPad, and iPod touch running iPhoneOS 2 to iOS 9.
+       Reroutes the device's TLS/SSL through OpenSSL 1.1.1 (TLS 1.0 through 1.3, modern ciphers
+       like ChaCha20-Poly1305 and AES-GCM) so old Safari and apps can reach today's servers again.
+       Certificates are verified against the device's own system trust store, and SSL pinning and
+       mutual TLS keep working.</p>
     <p>
-      <a href="debs/tlsfix_1.0.0_iphoneos-arm.deb">Download .deb</a> ·
+      <a href="debs/com.skyglow.tlsfix_1.1.deb">Download .deb</a> ·
       <a href="https://github.com/nfzerox/TLSFix">Source &amp; docs</a>
     </p>
   </div>

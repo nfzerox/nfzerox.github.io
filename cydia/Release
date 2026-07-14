@@ -1,20 +1,20 @@
 Origin: nfzerox
 Label: nfzerox
 Suite: stable
-Version: 1.0
+Version: 1.1
 Codename: ios
 Architectures: iphoneos-arm
 Components: main
-Description: TLSFix: modern HTTPS for legacy iOS
+Description: TLSFix: modern SSL/TLS for legacy iOS (iPhoneOS 2 - iOS 9)
 MD5Sum:
- 8312e764e5d6d80cf20a869e45fc7eac 868 Packages
- 65f07039616f1cb173f3aa3d0f56005d 584 Packages.gz
- 16b82e5e0d686ef3bec07fce5c846cab 636 Packages.bz2
+ 7923e65a77c7cb6b9149eeee81ceca63 601 Packages
+ 51968d0f9e46a5b7bf0f458a0759df73 431 Packages.gz
+ 378b935f7e7162c7722fdf6c705129ad 472 Packages.bz2
 SHA1:
- 2001071fbd317fa3628eeb85a1252454a9fe0da8 868 Packages
- 591c8da949cba666babe280d961bd2e54037a673 584 Packages.gz
- 5102191ab8b5b21ad9a31151cc0825f366fdb404 636 Packages.bz2
+ ae6b837bcb5cf866992afd298fd473d444443edf 601 Packages
+ 415c72d4243c1641e79aa9bceff70970987dc21f 431 Packages.gz
+ 4f04bda52783ee02e27cd4e44beda71e6a925ac5 472 Packages.bz2
 SHA256:
- 4404528790481668eed8e639df40f890ed0f7bc6479762f59803c284a95d50b1 868 Packages
- 9fe6c2949b66adfb7d382c53c27f1766439bdf55643d72bf4ca6153d16470d87 584 Packages.gz
- 4f58da252a35f6da8751e29e6da6d54a7dd9864475f4e7eb2ecc8e622cbb092c 636 Packages.bz2
+ 80036431a174a85753380d31c7a4dc208fcc2bcb91280dab2967bee9546eaa3f 601 Packages
+ 21af819d7a67cdcec51edfb08914c3672e0f7612d9ff121366d8516d64434fc5 431 Packages.gz
+ a019f5bd7fbc6d1e616f97fbec4370b88b234218ba4f03946a699f3818d3ed08 472 Packages.bz2

@@ -49,11 +49,11 @@ cat > "$REL" <<EOF
 Origin: nfzerox
 Label: nfzerox
 Suite: stable
-Version: 1.0
+Version: 1.1
 Codename: ios
 Architectures: iphoneos-arm
 Components: main
-Description: TLSFix: modern HTTPS for legacy iOS
+Description: TLSFix: modern SSL/TLS for legacy iOS (iPhoneOS 2 - iOS 9)
 EOF
 emit_hashes() {  # $1 = algo for shasum (1/256) or "md5"; $2 = header
   print "$2:" >> "$REL"
