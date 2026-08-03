@@ -8,9 +8,30 @@ Author: nfzerox, Requis
 Maintainer: nfzerox, Requis
 Section: Tweaks
 Conflicts: com.tlsfix
-Installed-Size: 6716
+Installed-Size: 6700
 Filename: debs/com.skyglow.tlsfix_1.1.deb
 Size: 3311252
 MD5sum: ba9af608830dd02cfc01bf92c95b873c
 SHA1: 574fb87a899fba9d85f5928961baed13a7991315
 SHA256: 2ab67fb3adeafe25bf12bd8502287e55294374a5e06366a22d0a0faf96d864e0
+
+Package: com.mac.virtual
+Name: Virtual Mac
+Version: 1:1.0+git282.420fb6c917
+Architecture: iphoneos-arm64
+Description: People have dreamed of running macOS on iPad for more than a decade.
+ Today, that dream comes true. With Virtual Mac, iPad finally breaks free from
+ iPadOS, enabling pro apps like Xcode and Terminal to run directly on device.
+ Requires iPad Pro (M1, M2) or iPad Air (M1) running iPadOS 16 up to 16.3.1.
+Maintainer: Virtual Mac
+Author: Virtual Mac
+Section: Utilities
+Priority: optional
+Installed-Size: 32092
+Depends: firmware (>= 16.0), firmware (<< 16.4), dopamine-basebin-link, ellekit
+Tag: role::enduser
+Filename: debs/VirtualMac_1.0.deb
+Size: 8025904
+MD5sum: be6b61b5f0fcb44d4c541defa149c435
+SHA1: 692f11ab8b783c35b9aee55d69db1e7c57013ab2
+SHA256: 85b8d41cfa523563060db3590afced93881efb5b5ec3610be30a3d06abaf4b30

@@ -51,9 +51,9 @@ Label: nfzerox
 Suite: stable
 Version: 1.1
 Codename: ios
-Architectures: iphoneos-arm
+Architectures: iphoneos-arm iphoneos-arm64
 Components: main
-Description: TLSFix: modern SSL/TLS for legacy iOS (iPhoneOS 2 - iOS 9)
+Description: iOS software from nfzerox
 EOF
 emit_hashes() {  # $1 = algo for shasum (1/256) or "md5"; $2 = header
   print "$2:" >> "$REL"
