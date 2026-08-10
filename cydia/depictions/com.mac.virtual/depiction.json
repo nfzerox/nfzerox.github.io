@@ -1,0 +1,120 @@
+{
+  "minVersion": "0.4",
+  "class": "DepictionTabView",
+  "headerImage": "https://raw.githubusercontent.com/nfzerox/VirtualMacOniPad/refs/heads/main/VirtualMac/screenshots/VirtualMac.png",
+  "tintColor": "#1676F3",
+  "tabs": [
+    {
+      "class": "DepictionStackView",
+      "tabname": "Details",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "People have dreamed of running macOS on iPad for more than a decade. Today, that dream comes true. With Virtual Mac, iPad finally breaks free from iPadOS, enabling pro apps like Xcode and Terminal to run directly on device. Requires iPad Pro (M1, M2) or iPad Air (M1) running iPadOS 14 up to 16.3.1.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Screenshots",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionScreenshotsView",
+          "itemCornerRadius": 10,
+          "itemSize": "{320, 240}",
+          "screenshots": [
+            {
+              "url": "https://raw.githubusercontent.com/nfzerox/VirtualMacOniPad/refs/heads/main/VirtualMac/screenshots/VirtualMac_macOS.png",
+              "accessibilityText": "macOS running on iPad"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/nfzerox/VirtualMacOniPad/refs/heads/main/VirtualMac/screenshots/VirtualMac_Library.png",
+              "accessibilityText": "Virtual Mac library"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/nfzerox/VirtualMacOniPad/refs/heads/main/VirtualMac/screenshots/VirtualMac_LibraryList.png",
+              "accessibilityText": "Virtual Mac library list"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/nfzerox/VirtualMacOniPad/refs/heads/main/VirtualMac/screenshots/VirtualMac_Welcome.png",
+              "accessibilityText": "Welcome to Virtual Mac"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/nfzerox/VirtualMacOniPad/refs/heads/main/VirtualMac/screenshots/VirtualMac_Create.png",
+              "accessibilityText": "Create a Virtual Mac"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/nfzerox/VirtualMacOniPad/refs/heads/main/VirtualMac/screenshots/VirtualMac_Download.png",
+              "accessibilityText": "Downloading macOS"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/nfzerox/VirtualMacOniPad/refs/heads/main/VirtualMac/screenshots/VirtualMac_Configuration.png",
+              "accessibilityText": "Virtual Mac configuration"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/nfzerox/VirtualMacOniPad/refs/heads/main/VirtualMac/screenshots/VirtualMac_Settings.png",
+              "accessibilityText": "Virtual Mac settings"
+            }
+          ]
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Compatibility",
+          "text": "iPadOS 14 up to iPadOS 16.3.1"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Price",
+          "text": "Free"
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Source Code and Documentation",
+          "action": "https://github.com/nfzerox/VirtualMacOniPad",
+          "openExternal": 1
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Report an Issue",
+          "action": "https://github.com/nfzerox/VirtualMacOniPad/issues",
+          "openExternal": 1
+        }
+      ]
+    },
+    {
+      "class": "DepictionStackView",
+      "tabname": "Changelog",
+      "views": [
+        {
+          "class": "DepictionHeaderView",
+          "title": "Version 1.1",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Virtual Mac on iPad 1.1 introduces support for iPadOS 14 and iPadOS 15, improves touch and keyboard input, adds localization across 37 languages, and includes design and reliability improvements.\n\n### Compatibility\n- Introduces support for iPadOS 14 and iPadOS 15\n- Raises the configurable memory limit for Virtual Mac (jamesy0ung)\n\n### Touch\n- Scroll through macOS with two fingers\n- Perform a secondary click by tapping with two fingers\n- Double tapping a file or folder opens it more reliably in Finder\n- Fixes an issue where tapping a menu item doesn't perform the selected action\n- Perform a secondary click with an optional touch and hold gesture in Settings\n\n### Keyboard\n- Use the globe (fn) key for page up, page down, home, end, forward delete, and keypad enter shortcuts (qwqVictor)\n- Adds adjustable control overlay opacity, including a fully transparent option that remains tappable\n- Adds an optional Keyboard Crash Workaround for iPadOS 16.2\n- Prevents the SpringBoard keyboard and gesture hook from crashing into Safe Mode (qwqVictor)\n- Improves Mac keyboard shortcut forwarding across tweak loaders (qwqVictor)\n\n### Installation\n- Resolves installer launch failure by automatically repairing traverse only permission required on /var/root (Mohabreda)\n- Detects and temporarily stops conflicting usbmuxd processes during installation (kok3shidoll)\n- Automatically creates a compatible configuration manifest when importing a Virtual Mac bundle\n- Improves alerts for DFU and usbmuxd conflicts, low storage failures, and other installation failures\n\n### Design and Localization\n- Adds localization for 37 languages\n- Streamlines the New Virtual Mac screen to easily choose between the recommended release and other macOS versions\n- Shows each Virtual Mac's storage capacity in grid and list view\n- Adds an optional Portrait Full Screen resolution setting\n\n### Reliability\n- Adds Export Diagnostics, which produces a ZIP archive with app and restore logs for troubleshooting\n- Adds an optional Recover Networking After Sleep setting to restore ethernet connectivity after sleep or backgrounding",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Version 1.0",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Virtual Mac on iPad 1.0 is the initial release.",
+          "useSpacing": true
+        }
+      ]
+    }
+  ]
+}
