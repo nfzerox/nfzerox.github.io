@@ -91,6 +91,20 @@
       "views": [
         {
           "class": "DepictionHeaderView",
+          "title": "Version 1.1.1",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Virtual Mac on iPad 1.1.1 improves the problem reporting experience and contains bug fixes:\n\n- Redesigned problem reporting experience guide users to create a screen recording, save diagnostics, and create an issue on Github\n- Automatically detect and fix keyboard related crashes\n- Fixes Move Controls checkmark placement in HUD menu",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionHeaderView",
           "title": "Version 1.1",
           "useBoldText": true,
           "useBottomMargin": true
