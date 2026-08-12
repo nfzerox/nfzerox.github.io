@@ -89,7 +89,7 @@ cat > "$REL" <<EOF
 Origin: nfzerox
 Label: nfzerox
 Suite: stable
-Version: 1.1.1
+Version: 1.1.2
 Codename: ios
 Architectures: iphoneos-arm iphoneos-arm64
 Components: main

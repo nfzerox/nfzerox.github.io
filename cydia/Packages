@@ -46,6 +46,29 @@ SHA256: 38bda26287ec672893ae9e2c5b9cdcb5fe3e9a66e2daafb486d330ab84c67223
 
 Package: com.mac.virtual
 Name: Virtual Mac
+Version: 2:1.1.2+491.c100b87e4a
+Architecture: all
+Description: People have dreamed of running macOS on iPad for more than a decade.
+ Today, that dream comes true. With Virtual Mac, iPad finally breaks free from
+ iPadOS, enabling pro apps like Xcode and Terminal to run directly on device.
+ Requires iPad Pro (M1, M2) or iPad Air (M1) running iPadOS 14 up to 16.3.1.
+Maintainer: Virtual Mac
+Author: Virtual Mac
+Icon: https://raw.githubusercontent.com/nfzerox/VirtualMacOniPad/main/VirtualMac/assets/VirtualMac.png
+Section: Utilities
+Priority: optional
+Installed-Size: 102508
+Depends: firmware (>= 14.5), firmware (<< 16.4), ellekit | org.coolstar.libhooker
+Tag: role::enduser
+SileoDepiction: https://nfzerox.github.io/cydia/depictions/com.mac.virtual/depiction.json
+Filename: debs/VirtualMac_1.1.2.deb
+Size: 19925996
+MD5sum: ef8ad9c57a5f71422da12dfff65cfeb7
+SHA1: 02ceb4d1fe514b2599bf7a1c7218a5696aca6ba1
+SHA256: 0ff49c35f1c6d7f0af5fb938bf421a04a3d8faa63b51ea307a38e3d80184d250
+
+Package: com.mac.virtual
+Name: Virtual Mac
 Version: 2:1.1+440.471fc7e29a
 Architecture: all
 Description: People have dreamed of running macOS on iPad for more than a decade.

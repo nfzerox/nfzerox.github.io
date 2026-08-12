@@ -91,6 +91,20 @@
       "views": [
         {
           "class": "DepictionHeaderView",
+          "title": "Version 1.1.2",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Virtual Mac on iPad 1.1.2 improves network reliability and external display support, and contains bug fixes:\n\n### Network Reliability\n- Prevents Virtual Mac networking services from being terminated under memory pressure\n\n### External Display\n- Adds Full Screen Mirroring for external displays (qwqVictor)\n- Adds display resolution presets for the active window, external display, 1080p, 4K, 5K, and 6K\n- Fixes reversed scroll directions when using Virtual Mac on an external display with Stage Manager\n\n### Touch and Diagnostics\n- Adds a scrolling speed setting for two-finger touchscreen scrolling\n- Quickly access and adjust Virtual Mac settings from the more menu\n- Warns users when running Virtual Mac in an unsupported roothide environment",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionHeaderView",
           "title": "Version 1.1.1",
           "useBoldText": true,
           "useBottomMargin": true
