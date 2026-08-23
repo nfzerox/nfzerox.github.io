@@ -91,6 +91,20 @@
       "views": [
         {
           "class": "DepictionHeaderView",
+          "title": "Version 1.2",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Virtual Mac on iPad 1.2 adds support for Final Cut Pro, improves compatibility with Metal games, introduces OpenGL and OpenCL acceleration, and improves system stability.\n\n### Pro Apps\n- Adds support for pro video apps like Final Cut Pro in Virtual Mac\n- Quickly download the latest compatible version of Xcode, Final Cut Pro Trial, Logic Pro Trial, and Pixelmator Pro Trial from the menu bar\n\n### Graphics\n- Adds support for Mac games like Skate Story and 7 Days to Die\n- Fixes pink graphics in Metal games by introducing native support for BC texture pixel formats\n- Press ctrl+↑, then drag game window out of Mission Control for better performance in windowed mode\n- Introduces support for OpenGL and OpenCL acceleration which improves performance in apps like Chess and Preview\n- Easily toggle OpenGL and OpenCL acceleration from the menu bar for apps incompatible with runtime library injection such as Hopper Disassembler\n- If you’d like to add support for another game, point Codex or Claude Code to the Virtual Mac repo and iterate together, then open a pull request\n\n### Stability\n- Fixes network connectivity issues on iPadOS 14\n- Reduces system freezes when Virtual Mac is under heavy graphics load\n- Fixes Geekbench Metal benchmark on iPad Pro models with 16 GB of RAM (iPad Pro with 8 GB RAM have insufficient VRAM)\n\n### Input\n- Adds experimental, opt-in support for Apple Pencil pressure and tilt (requires separate download for pencil-probe by @ma-syu)",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionHeaderView",
           "title": "Version 1.1.2",
           "useBoldText": true,
           "useBottomMargin": true

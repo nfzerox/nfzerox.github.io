@@ -1,20 +1,20 @@
 Origin: nfzerox
 Label: nfzerox
 Suite: stable
-Version: 1.1.2
+Version: 1.2
 Codename: ios
 Architectures: iphoneos-arm iphoneos-arm64
 Components: main
 Description: iOS software from nfzerox
 MD5Sum:
- 2c7d791d64ac50ce9895c5813b204cc9 4687 Packages
- e02f70a24f0e4d73b12a194884c2271f 1389 Packages.gz
- 4de9b3a967a917b4b14ad68dba3ea418 1646 Packages.bz2
+ 01db968f233b6c2479aeae0476b7f38d 5704 Packages
+ 7d6c56878463037499441a497a112936 1519 Packages.gz
+ 791d99e62b66ca8f90a999367ba94ba2 1826 Packages.bz2
 SHA1:
- 57223ca2c698829b7755f3b21543194ca7a28d5a 4687 Packages
- 65459aec4ee88d12914b48d5f24740aae6c199c2 1389 Packages.gz
- c21fd0422058220503e9934957fced14a55ef5d7 1646 Packages.bz2
+ ce23dc837182cf5161306746b59a6744df3b5d5a 5704 Packages
+ 2ee2230b84ee3ad8a4f327ff45d520ee58e8d536 1519 Packages.gz
+ 344b8f31d0469715426d9a9d72706dbe546fe04d 1826 Packages.bz2
 SHA256:
- cace43357596af9015042b85de515e10db787005fcc8cd69f813adbaaa9ddd4e 4687 Packages
- 9c54c071db231f131d5f35035c9d5455ea8d2414e6cbccd0efd84fdb09c9bc06 1389 Packages.gz
- 801df37dce0d8c7f6b11fa62f299ef51b6b2ab5261cf8a5c883babc245f1ca64 1646 Packages.bz2
+ 0e9b15c6844cb8905b31214e50be266eeaedb01ba9f9d0144f49133b758fb635 5704 Packages
+ 71f9eefdb18c58105ea3d76c414c5a25abb8c660c2ccadf4ba026f64516779f6 1519 Packages.gz
+ 455c8ec5c1c46c50dc3a5931d92e46063862c0ae7cc30f4db64a650656b92551 1826 Packages.bz2

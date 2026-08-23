@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>App Download</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      max-width: 72rem;
+      margin: 2rem auto;
+      padding: 0 3rem 3rem;
+      background: Canvas;
+      color: CanvasText;
+    }
+
+    section {
+      scroll-margin-top: 2rem;
+    }
+
+    .section-heading {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      column-gap: 2rem;
+    }
+
+    .section-heading h2 {
+      flex: 1 1 8rem;
+    }
+
+    .toggle {
+      display: inline-flex;
+      flex: 0 1 auto;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .toggle[hidden] {
+      display: none;
+    }
+
+    .toggle input {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+    }
+
+    .toggle-switch {
+      position: relative;
+      width: 2.25rem;
+      height: 1.25rem;
+      flex: none;
+      border-radius: 999px;
+      background: #86868b;
+      transition: background-color 160ms ease;
+    }
+
+    .toggle-switch::after {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      background: white;
+      box-shadow: 0 1px 2px rgb(0 0 0 / 35%);
+      content: "";
+      transition: transform 160ms ease;
+    }
+
+    .toggle input:checked + .toggle-switch {
+      background: #0070c9;
+    }
+
+    .toggle input:checked + .toggle-switch::after {
+      transform: translateX(1rem);
+    }
+
+    .toggle input:focus-visible + .toggle-switch {
+      outline: 2px solid #0070c9;
+      outline-offset: 2px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      margin-bottom: 2.5rem;
+    }
+
+    .os-column {
+      width: 21rem;
+    }
+
+    td {
+      padding: 0.65rem 0;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    td:first-child {
+      padding-right: 1.5rem;
+      white-space: nowrap;
+    }
+
+    .minor-release:not(.top-level-release) td:first-child {
+      padding-left: 1.5rem;
+    }
+
+    a {
+      color: #0070c9;
+      overflow-wrap: anywhere;
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: #0070c9;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 40rem) {
+      .os-column {
+        width: 50%;
+      }
+
+      td:first-child {
+        white-space: normal;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main id="downloads">
+    <section id="xcode">
+      <div class="section-heading">
+        <h2>Xcode</h2>
+        <label class="toggle" hidden>
+          <input id="minor-releases" type="checkbox">
+          <span class="toggle-switch" aria-hidden="true"></span>
+          <span>Show minor releases</span>
+        </label>
+      </div>
+      <table>
+        <colgroup><col class="os-column"><col></colgroup>
+        <tbody>
+          <tr data-test-os="26.0"><td>macOS Tahoe 26 or later</td><td><a target="_blank" rel="noopener" href="https://xcodereleases.com/">Xcode Releases</a></td></tr>
+          <tr data-test-os="15.6"><td>macOS Sequoia 15</td><td><a target="_blank" rel="noopener" href="https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_26.3/Xcode_26.3_Apple_silicon.xip">Xcode 26.3</a></td></tr>
+          <tr class="minor-release" data-test-os="15.6"><td>macOS Sequoia 15.6 or later</td><td><a target="_blank" rel="noopener" href="https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_26.3/Xcode_26.3_Apple_silicon.xip">Xcode 26.3</a></td></tr>
+          <tr class="minor-release" data-test-os="15.5"><td>macOS Sequoia 15.3 to 15.5</td><td><a target="_blank" rel="noopener" href="https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_16.4/Xcode_16.4.xip">Xcode 16.4</a></td></tr>
+          <tr class="minor-release" data-test-os="15.2"><td>macOS Sequoia 15.2</td><td><a target="_blank" rel="noopener" href="https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_16.3/Xcode_16.3.xip">Xcode 16.3</a></td></tr>
+          <tr class="minor-release" data-test-os="15.1"><td>macOS Sequoia 15.0 to 15.1</td><td><a target="_blank" rel="noopener" href="https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_16.2/Xcode_16.2.xip">Xcode 16.2</a></td></tr>
+          <tr data-test-os="14.6"><td>macOS Sonoma 14</td><td><a target="_blank" rel="noopener" href="https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_16.2/Xcode_16.2.xip">Xcode 16.2</a></td></tr>
+          <tr class="minor-release" data-test-os="14.5"><td>macOS Sonoma 14.5 or later</td><td><a target="_blank" rel="noopener" href="https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_16.2/Xcode_16.2.xip">Xcode 16.2</a></td></tr>
+          <tr class="minor-release" data-test-os="14.4"><td>macOS Sonoma 14.0 to 14.4</td><td><a target="_blank" rel="noopener" href="https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_15.4/Xcode_15.4.xip">Xcode 15.4</a></td></tr>
+          <tr data-test-os="13.6"><td>macOS Ventura 13</td><td><a target="_blank" rel="noopener" href="https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_15.2/Xcode_15.2.xip">Xcode 15.2</a></td></tr>
+          <tr class="minor-release" data-test-os="13.5"><td>macOS Ventura 13.5 or later</td><td><a target="_blank" rel="noopener" href="https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_15.2/Xcode_15.2.xip">Xcode 15.2</a></td></tr>
+          <tr class="minor-release" data-test-os="13.4"><td>macOS Ventura 13.0 to 13.4</td><td><a target="_blank" rel="noopener" href="https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_14.3.1/Xcode_14.3.1.xip">Xcode 14.3.1</a></td></tr>
+          <tr data-test-os="12.6.1"><td>macOS Monterey 12</td><td><a target="_blank" rel="noopener" href="https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_14.2/Xcode_14.2.xip">Xcode 14.2</a></td></tr>
+          <tr class="minor-release" data-test-os="12.5"><td>macOS Monterey 12.5 or later</td><td><a target="_blank" rel="noopener" href="https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_14.2/Xcode_14.2.xip">Xcode 14.2</a></td></tr>
+          <tr class="minor-release" data-test-os="12.4"><td>macOS Monterey 12.0 to 12.4</td><td><a target="_blank" rel="noopener" href="https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_13.4.1/Xcode_13.4.1.xip">Xcode 13.4.1</a></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="final-cut-pro-trial">
+      <h2>Final Cut Pro Trial</h2>
+      <table>
+        <colgroup><col class="os-column"><col></colgroup>
+        <tbody>
+          <tr data-test-os="15.6"><td>macOS Sequoia 15 or later</td><td><a target="_blank" rel="noopener" href="https://secure-appldnld.apple.com/Final_Cut_Pro_X/072-89443-20250919-9d1c69c0-0983-4103-a03c-c2783d103cbd/FinalCutProTrial.dmg">Final Cut Pro Trial 11.2</a></td></tr>
+          <tr class="minor-release" data-test-os="15.6"><td>macOS Sequoia 15.6 or later</td><td><a target="_blank" rel="noopener" href="https://secure-appldnld.apple.com/Final_Cut_Pro_X/072-89443-20250919-9d1c69c0-0983-4103-a03c-c2783d103cbd/FinalCutProTrial.dmg">Final Cut Pro Trial 11.2</a></td></tr>
+          <tr class="minor-release" data-test-os="15.5"><td>macOS Sequoia 15.0 to 15.5</td><td><a target="_blank" rel="noopener" href="https://secure-appldnld.apple.com/Final_Cut_Pro_X/082-42810-20250520-d7183f76-a105-4af1-a4b1-0f670d6fd97f/FinalCutProTrial.dmg">Final Cut Pro Trial 11.1.1</a></td></tr>
+          <tr data-test-os="14.6"><td>macOS Sonoma 14</td><td><a target="_blank" rel="noopener" href="https://secure-appldnld.apple.com/Final_Cut_Pro_X/082-42810-20250520-d7183f76-a105-4af1-a4b1-0f670d6fd97f/FinalCutProTrial.dmg">Final Cut Pro Trial 11.1.1</a></td></tr>
+          <tr class="minor-release" data-test-os="14.6"><td>macOS Sonoma 14.6 or later</td><td><a target="_blank" rel="noopener" href="https://secure-appldnld.apple.com/Final_Cut_Pro_X/082-42810-20250520-d7183f76-a105-4af1-a4b1-0f670d6fd97f/FinalCutProTrial.dmg">Final Cut Pro Trial 11.1.1</a></td></tr>
+          <tr class="minor-release" data-test-os="14.5"><td>macOS Sonoma 14.0 to 14.5</td><td><a target="_blank" rel="noopener" href="https://web.archive.org/web/20240218033413id_/https://secure-appldnld.apple.com/Final_Cut_Pro_X/052-25871-20240104-10AEBC1F-6C9C-4A1C-B781-7D11DDAE5AFD/FinalCutProTrial.dmg">Final Cut Pro Trial 10.7.1</a></td></tr>
+          <tr class="minor-release top-level-release" data-test-os="13.6"><td>macOS Ventura 13</td><td><a target="_blank" rel="noopener" href="https://web.archive.org/web/20240218033413id_/https://secure-appldnld.apple.com/Final_Cut_Pro_X/052-25871-20240104-10AEBC1F-6C9C-4A1C-B781-7D11DDAE5AFD/FinalCutProTrial.dmg">Final Cut Pro Trial 10.7.1</a></td></tr>
+          <tr class="minor-release" data-test-os="13.5"><td>macOS Ventura 13.5 or later</td><td><a target="_blank" rel="noopener" href="https://web.archive.org/web/20240218033413id_/https://secure-appldnld.apple.com/Final_Cut_Pro_X/052-25871-20240104-10AEBC1F-6C9C-4A1C-B781-7D11DDAE5AFD/FinalCutProTrial.dmg">Final Cut Pro Trial 10.7.1</a></td></tr>
+          <tr class="minor-release" data-test-os="13.4"><td>macOS Ventura 13.0 to 13.4</td><td><a target="_blank" rel="noopener" href="https://mega.nz/file/1PJXRYTY#AIrTuvLhmnQhHWIVpRhT8G0Qo_uJj_IhqpuNEc6iZHI">Final Cut Pro Trial 10.6.8</a></td></tr>
+          <tr class="minor-release top-level-release" data-test-os="12.6.1"><td>macOS Monterey 12</td><td><a target="_blank" rel="noopener" href="https://mega.nz/file/1PJXRYTY#AIrTuvLhmnQhHWIVpRhT8G0Qo_uJj_IhqpuNEc6iZHI">Final Cut Pro Trial 10.6.8</a></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="logic-pro-trial">
+      <h2>Logic Pro Trial</h2>
+      <table>
+        <colgroup><col class="os-column"><col></colgroup>
+        <tbody>
+          <tr data-test-os="14.4"><td>macOS Sonoma 14 or later</td><td><a target="_blank" rel="noopener" href="https://web.archive.org/web/20260104181036id_/https://secure-appldnld.apple.com/LogicPro/082-59694-20250731-47EF8912-A031-471B-97B2-6EA2F7501E4B/LogicProTrial.dmg">Logic Pro Trial 11.2.2</a></td></tr>
+          <tr class="minor-release" data-test-os="14.4"><td>macOS Sonoma 14.4 or later</td><td><a target="_blank" rel="noopener" href="https://web.archive.org/web/20260104181036id_/https://secure-appldnld.apple.com/LogicPro/082-59694-20250731-47EF8912-A031-471B-97B2-6EA2F7501E4B/LogicProTrial.dmg">Logic Pro Trial 11.2.2</a></td></tr>
+          <tr class="minor-release" data-test-os="14.3"><td>macOS Sonoma 14.0 to 14.3</td><td><a target="_blank" rel="noopener" href="https://web.archive.org/web/20240731130412id_/https://updates.cdn-apple.com/2024/macos/052-19503-20240617-69c3c5ab-d0e3-4148-a7e4-76856d0d01e1/LogicProTrial.dmg">Logic Pro Trial 11.0.1</a></td></tr>
+          <tr data-test-os="13.6"><td>macOS Ventura 13</td><td><a target="_blank" rel="noopener" href="https://web.archive.org/web/20240731130412id_/https://updates.cdn-apple.com/2024/macos/052-19503-20240617-69c3c5ab-d0e3-4148-a7e4-76856d0d01e1/LogicProTrial.dmg">Logic Pro Trial 11.0.1</a></td></tr>
+          <tr class="minor-release" data-test-os="13.5"><td>macOS Ventura 13.5 or later</td><td><a target="_blank" rel="noopener" href="https://web.archive.org/web/20240731130412id_/https://updates.cdn-apple.com/2024/macos/052-19503-20240617-69c3c5ab-d0e3-4148-a7e4-76856d0d01e1/LogicProTrial.dmg">Logic Pro Trial 11.0.1</a></td></tr>
+          <tr class="minor-release" data-test-os="13.4"><td>macOS Ventura 13.0 to 13.4</td><td><a target="_blank" rel="noopener" href="https://web.archive.org/web/20231124040010id_/https://secure-appldnld.apple.com/LogicPro/032-95349-20230713-47A2A6BE-7D9B-4C7D-9398-D9DAECCE9F8B/LogicProTrial.dmg">Logic Pro Trial 10.7.9</a></td></tr>
+          <tr data-test-os="12.6.1"><td>macOS Monterey 12</td><td><a target="_blank" rel="noopener" href="https://web.archive.org/web/20231124040010id_/https://secure-appldnld.apple.com/LogicPro/032-95349-20230713-47A2A6BE-7D9B-4C7D-9398-D9DAECCE9F8B/LogicProTrial.dmg">Logic Pro Trial 10.7.9</a></td></tr>
+          <tr class="minor-release" data-test-os="12.3"><td>macOS Monterey 12.3 or later</td><td><a target="_blank" rel="noopener" href="https://web.archive.org/web/20231124040010id_/https://secure-appldnld.apple.com/LogicPro/032-95349-20230713-47A2A6BE-7D9B-4C7D-9398-D9DAECCE9F8B/LogicProTrial.dmg">Logic Pro Trial 10.7.9</a></td></tr>
+          <tr class="minor-release" data-test-os="12.2"><td>macOS Monterey 12.0 to 12.2</td><td><a target="_blank" rel="noopener" href="https://web.archive.org/web/20220621181150id_/https://secure-appldnld.apple.com/LogicPro/002-85537-20220427-1B670F89-A277-40F6-90E0-7DA33F48EBA1/LogicProTrial.dmg">Logic Pro Trial 10.7.4</a></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="pixelmator-pro-trial">
+      <h2>Pixelmator Pro Trial</h2>
+      <table>
+        <colgroup><col class="os-column"><col></colgroup>
+        <tbody>
+          <tr data-test-os="12.0"><td>macOS Monterey 12 or later</td><td><a target="_blank" rel="noopener" href="https://web.archive.org/web/20241220103313/https://download-cdn.pixelmator.com/trial/Pixelmator-Pro.zip">Pixelmator Pro Trial 3.6.14</a></td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script>
+    (() => {
+      "use strict";
+
+      const destinations = Object.freeze({
+        virtualMac: "https://github.com/nfzerox/VirtualMacOniPad",
+        pencilProbe: "https://github.com/ma-syu/pencil-probe",
+        xcodeReleases: "https://xcodereleases.com/",
+        finalCutArchive: "https://gist.github.com/b0gdanw/956b1edc61145ea21ac4a8c1f6cdccc9",
+        finalCut1068: "https://mega.nz/file/1PJXRYTY#AIrTuvLhmnQhHWIVpRhT8G0Qo_uJj_IhqpuNEc6iZHI",
+        finalCut1071: "https://web.archive.org/web/20240218033413id_/https://secure-appldnld.apple.com/Final_Cut_Pro_X/052-25871-20240104-10AEBC1F-6C9C-4A1C-B781-7D11DDAE5AFD/FinalCutProTrial.dmg",
+        finalCut1111: "https://secure-appldnld.apple.com/Final_Cut_Pro_X/082-42810-20250520-d7183f76-a105-4af1-a4b1-0f670d6fd97f/FinalCutProTrial.dmg",
+        finalCutLatest: "https://secure-appldnld.apple.com/Final_Cut_Pro_X/072-89443-20250919-9d1c69c0-0983-4103-a03c-c2783d103cbd/FinalCutProTrial.dmg",
+        logicArchive: "https://web.archive.org/web/20250000000000*/https://www.apple.com/logic-pro/trial/",
+        logic1074: "https://web.archive.org/web/20220621181150id_/https://secure-appldnld.apple.com/LogicPro/002-85537-20220427-1B670F89-A277-40F6-90E0-7DA33F48EBA1/LogicProTrial.dmg",
+        logic1079: "https://web.archive.org/web/20231124040010id_/https://secure-appldnld.apple.com/LogicPro/032-95349-20230713-47A2A6BE-7D9B-4C7D-9398-D9DAECCE9F8B/LogicProTrial.dmg",
+        logic1101: "https://web.archive.org/web/20240731130412id_/https://updates.cdn-apple.com/2024/macos/052-19503-20240617-69c3c5ab-d0e3-4148-a7e4-76856d0d01e1/LogicProTrial.dmg",
+        logicLatest: "https://web.archive.org/web/20260104181036id_/https://secure-appldnld.apple.com/LogicPro/082-59694-20250731-47EF8912-A031-471B-97B2-6EA2F7501E4B/LogicProTrial.dmg",
+        pixelmatorProTrial: "https://web.archive.org/web/20241220103313/https://download-cdn.pixelmator.com/trial/Pixelmator-Pro.zip",
+        xcode1341: "https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_13.4.1/Xcode_13.4.1.xip",
+        xcode142: "https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_14.2/Xcode_14.2.xip",
+        xcode1431: "https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_14.3.1/Xcode_14.3.1.xip",
+        xcode152: "https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_15.2/Xcode_15.2.xip",
+        xcode154: "https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_15.4/Xcode_15.4.xip",
+        xcode162: "https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_16.2/Xcode_16.2.xip",
+        xcode163: "https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_16.3/Xcode_16.3.xip",
+        xcode164: "https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_16.4/Xcode_16.4.xip",
+        xcode263: "https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_26.3/Xcode_26.3_Apple_silicon.xip"
+      });
+
+      function parseVersion(value) {
+        const match = /^(\d+)(?:\.(\d+))?(?:\.(\d+))?$/.exec((value || "").trim());
+        return match ? [Number(match[1]), Number(match[2] || 0), Number(match[3] || 0)] : null;
+      }
+
+      function atLeast(version, major, minor = 0, patch = 0) {
+        const required = [major, minor, patch];
+        for (let index = 0; index < required.length; index += 1) {
+          if (version[index] !== required[index]) {
+            return version[index] > required[index];
+          }
+        }
+        return true;
+      }
+
+      function finalCutDestination(version) {
+        if (!version || !atLeast(version, 12)) {
+          return destinations.finalCutArchive;
+        }
+        if (atLeast(version, 15, 6)) {
+          return destinations.finalCutLatest;
+        }
+        if (atLeast(version, 14, 6)) {
+          return destinations.finalCut1111;
+        }
+        if (atLeast(version, 13, 5)) {
+          return destinations.finalCut1071;
+        }
+        return destinations.finalCut1068;
+      }
+
+      function logicDestination(version) {
+        if (!version || !atLeast(version, 12) || atLeast(version, 28)) {
+          return destinations.logicArchive;
+        }
+        if (atLeast(version, 14, 4)) {
+          return destinations.logicLatest;
+        }
+        if (atLeast(version, 13, 5)) {
+          return destinations.logic1101;
+        }
+        if (atLeast(version, 12, 3)) {
+          return destinations.logic1079;
+        }
+        return destinations.logic1074;
+      }
+
+      function xcodeDestination(version) {
+        if (!version || !atLeast(version, 12) || atLeast(version, 16)) {
+          return destinations.xcodeReleases;
+        }
+        if (atLeast(version, 15, 6)) {
+          return destinations.xcode263;
+        }
+        if (atLeast(version, 15, 3)) {
+          return destinations.xcode164;
+        }
+        if (atLeast(version, 15, 2)) {
+          return destinations.xcode163;
+        }
+        if (atLeast(version, 14, 5)) {
+          return destinations.xcode162;
+        }
+        if (atLeast(version, 14)) {
+          return destinations.xcode154;
+        }
+        if (atLeast(version, 13, 5)) {
+          return destinations.xcode152;
+        }
+        if (atLeast(version, 13)) {
+          return destinations.xcode1431;
+        }
+        if (atLeast(version, 12, 5)) {
+          return destinations.xcode142;
+        }
+        return destinations.xcode1341;
+      }
+
+      function resolveDestination(app, os) {
+        const version = parseVersion(os);
+        switch (app) {
+          case "final-cut-pro-trial":
+            return finalCutDestination(version);
+          case "logic-pro-trial":
+            return logicDestination(version);
+          case "xcode":
+            return xcodeDestination(version);
+          default:
+            return destinations.virtualMac;
+        }
+      }
+
+      const query = new URLSearchParams(window.location.search);
+      const app = query.get("app");
+      const os = query.get("os");
+      const knownApps = new Set(["final-cut-pro-trial", "logic-pro-trial", "xcode"]);
+
+      if (app === "pencil") {
+        window.location.replace(destinations.pencilProbe);
+        return;
+      }
+
+      if (app === "pixelmator-pro-trial") {
+        window.location.replace(destinations.pixelmatorProTrial);
+        return;
+      }
+
+      const minorReleases = document.getElementById("minor-releases");
+      const minorReleaseRows = document.querySelectorAll(".minor-release");
+      minorReleases.closest(".toggle").hidden = false;
+      minorReleaseRows.forEach(row => {
+        row.hidden = true;
+      });
+      minorReleases.addEventListener("change", () => {
+        minorReleaseRows.forEach(row => {
+          row.hidden = !minorReleases.checked;
+        });
+      });
+
+      if (knownApps.has(app) && os && os.trim()) {
+        window.location.replace(resolveDestination(app, os));
+        return;
+      }
+
+      if (query.has("test")) {
+        document.querySelectorAll("section tbody tr").forEach(row => {
+          const osVersion = row.dataset.testOs;
+          if (!osVersion) {
+            return;
+          }
+          const testURL = new URL(window.location.href);
+          testURL.search = "";
+          testURL.hash = "";
+          testURL.searchParams.set("app", row.closest("section").id);
+          testURL.searchParams.set("os", osVersion);
+          row.querySelector("a").href = testURL.href;
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

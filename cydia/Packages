@@ -90,6 +90,29 @@ MD5sum: 70f1f3c980506597ec74873c515933b5
 SHA1: 4c2b8da08c54322f93755ed4f30f97dd585a4689
 SHA256: ea0f61e40a87f90d15cc1be7bf5b39809374c892ef0152933209a847e7f97814
 
+Package: com.mac.virtual
+Name: Virtual Mac
+Version: 2:1.2+565.799fc13aff
+Architecture: all
+Description: People have dreamed of running macOS on iPad for more than a decade.
+ Today, that dream comes true. With Virtual Mac, iPad finally breaks free from
+ iPadOS, enabling pro apps like Xcode and Terminal to run directly on device.
+ Requires iPad Pro (M1, M2) or iPad Air (M1) running iPadOS 14 up to 16.3.1.
+Maintainer: Virtual Mac
+Author: Virtual Mac
+Icon: https://raw.githubusercontent.com/nfzerox/VirtualMacOniPad/main/VirtualMac/assets/VirtualMac.png
+Section: Utilities
+Priority: optional
+Installed-Size: 103712
+Depends: firmware (>= 14.5), firmware (<< 16.4), ellekit | org.coolstar.libhooker
+Tag: role::enduser
+SileoDepiction: https://nfzerox.github.io/cydia/depictions/com.mac.virtual/depiction.json
+Filename: debs/VirtualMac_1.2.deb
+Size: 20894044
+MD5sum: 0cf1a9464b83e8c1c5dca7ba1495a4f0
+SHA1: 83e229dd4b2cfccbbdf5ce46e23326ca311885c1
+SHA256: 48c1d0beec6bc5558d925a844f3a1a21b80aaa124d4566a455b9816db12df5e5
+
 Package: com.skyglow.tlsfix
 Name: TLSFix
 Version: 1.1
