@@ -10,7 +10,7 @@
       "views": [
         {
           "class": "DepictionMarkdownView",
-          "markdown": "People have dreamed of running macOS on iPad for more than a decade. Today, that dream comes true. With Virtual Mac, iPad finally breaks free from iPadOS, enabling pro apps like Xcode and Terminal to run directly on device. Requires iPad Pro (M1, M2) or iPad Air (M1) running iPadOS 14 up to 16.3.1.",
+          "markdown": "People have dreamed of running macOS on iPad for more than a decade. Today, that dream comes true. With Virtual Mac, iPad finally breaks free from iPadOS, enabling pro apps like Xcode, Terminal, Final Cut Pro, Logic Pro, and Pixelmator Pro to run directly on device. Requires iPad Pro (M1, M2) or iPad Air (M1) running iPadOS 14 up to 16.3.1, or iPhone 14 Pro and iPhone 14 Pro Max running iOS 16 up to 16.3.1.",
           "useSpacing": true
         },
         {
@@ -64,7 +64,7 @@
         {
           "class": "DepictionTableTextView",
           "title": "Compatibility",
-          "text": "iPadOS 14 up to iPadOS 16.3.1"
+          "text": "iPadOS 14 up to iPadOS 16.3.1, iOS 16 up to 16.3.1"
         },
         {
           "class": "DepictionTableTextView",
@@ -89,6 +89,20 @@
       "class": "DepictionStackView",
       "tabname": "Changelog",
       "views": [
+        {
+          "class": "DepictionHeaderView",
+          "title": "Version 1.2.1",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Virtual Mac on iPad 1.2.1 improves scrolling performance and system stability.\n\n### Input\n- Improves scrolling speed, acceleration, and responsiveness when using a mouse, trackpad, or touchscreen (LemomQ)\n- Delivers coalesced Apple Pencil samples at up to 240 Hz for improved responsiveness (ma-syu)\n- Adds an option to hide the mouse cursor when using the touchscreen\n\n### Stability\n- Fixes graphics issues with Sublime Text and Sublime Merge\n- Fixes black screen when launching Intel-based apps using Rosetta on iPadOS 14\n- Fixes boot failure when Video Encoding and Decoding Acceleration is enabled on iPadOS 14\n\n### Design\n- Adds informative text about recommended processor core count and memory allocation\n- Reduces text truncation when using Virtual Mac in Slide Over, Split View, and Stage Manager\n- Improves user interface on supported iPhone 14 Pro and iPhone 14 Pro Max models running iOS 16 up to 16.3.1",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
         {
           "class": "DepictionHeaderView",
           "title": "Version 1.2",
