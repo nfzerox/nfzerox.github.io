@@ -91,6 +91,20 @@
       "views": [
         {
           "class": "DepictionHeaderView",
+          "title": "Version 1.2.3",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Virtual Mac on iPad 1.2.3 adds momentum scrolling when using Magic Keyboard, fixes graphics issues with Firefox, and defaults to larger storage size when creating Virtual Mac.\n\n### Input\n- Adds momentum scrolling when using Magic Keyboard for iPad\n- Adds the ability to interrupt momentum scrolling with a light tap\n\n### Graphics\n- Fixes graphics issues with Firefox\n\n### Creation\n- Defaults to larger storage size for newly created Virtual Mac when iPad has sufficient remaining storage space\n- Adds informative text about storage being non-resizable after creating Virtual Mac",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionHeaderView",
           "title": "Version 1.2.2",
           "useBoldText": true,
           "useBottomMargin": true
